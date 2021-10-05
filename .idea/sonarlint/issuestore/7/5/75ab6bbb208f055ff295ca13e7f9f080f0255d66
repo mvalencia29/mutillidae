@@ -1,0 +1,7 @@
+
+B	php:S1481n"-Remove this unused "$lResult" local variable.(ô‘•¬
+L	php:S1172="7Remove the unused function parameter "$pSecurityLevel".(Ùž¥´
+3php:S125Y"Remove this commented out code.(ÑŠÇ»
+8php:S125\"Remove this commented out code.(ÒøÐ…ýÿÿÿÿ
+3php:S125_"Remove this commented out code.(™œá’
+Pphp:S131"7Add a "case default" clause to this "switch" statement.(Ê÷ÅÖþÿÿÿÿ

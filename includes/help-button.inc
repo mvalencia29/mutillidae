@@ -4,6 +4,5 @@
 		class="colorbox"
 		title="Help me with page <?php echo $lPage; ?>" style="color: #000000;">
 		<img alt="Help Me!" align="middle" src="./images/help-easy-button-48-48.png" />
-		Help Me!
 	</a>
 </span>

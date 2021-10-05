@@ -74,7 +74,9 @@
 	<link rel="stylesheet" type="text/css" href="styles/ddsmoothmenu/ddsmoothmenu.css" />
 	<link rel="stylesheet" type="text/css" href="javascript/jQuery/colorbox/colorbox.css" />
 	<link rel="stylesheet" type="text/css" href="styles/gritter/jquery.gritter.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 	<script src="javascript/jQuery/jquery.js"></script>
 	<script src="javascript/jQuery/colorbox/jquery.colorbox-min.js"></script>
 	<script src="javascript/ddsmoothmenu/ddsmoothmenu.js"></script>
@@ -88,92 +90,79 @@
 </head>
 <body>
 <table class="main-table-frame">
-	<tr class="main-table-frame-dark">
-		<td class="main-table-frame-first-bar" colspan="2">
-			<img src="images/coykillericon-50-38.png"/>
-			OWASP Mutillidae II: Keep Calm and Pwn On
-		</td>
-	</tr>
-	<tr class="main-table-frame-dark">
-		<td class="main-table-frame-second-bar" colspan="2">
-			<?php /* Note: $C_VERSION_STRING in index.php */
-			    echo $C_VERSION_STRING;
-			?>
-			<span><?php echo $lSecurityLevelMessage; ?></span>
-			<span><?php echo $lHintsMessage; ?></span>
-			<span><?php echo $lAuthenticationStatusMessage ?></span>
-		</td>
-	</tr>
+    <tr class="main-table-frame-dark">
+        <td class="main-table-frame-first-bar" colspan="2">
+            <div class="container" style="margin-top: 20px; margin-bottom: 20px">
+                <div class="row">
+                    <div class="col-9">
+                        <img src="images/coykillericon-50-38.png"/>
+                        OWASP Mutillidae II: Keep Calm and Pwn On
+                    </div>
+                    <div class="col-3" style="font-size: 16px">
+                        <div class="col" style="display: flex">
+                            <?php /* Note: $C_VERSION_STRING in index.php */
+                            echo $C_VERSION_STRING;
+                            ?>
+                        </div>
+                        <div class="col" style="display: flex">
+                            <span><?php echo $lSecurityLevelMessage; ?></span>
+                        </div>
+                        <div class="col" style="display: flex">
+                            <span><?php echo $lHintsMessage; ?></span>
+                        </div>
+                        <div class="col" style="display: flex">
+                            <span><?php echo $lAuthenticationStatusMessage ?></span>
+                        </div>
+                    </div>
+                </div>
+        </td>
+    </tr>
 	<tr class="main-table-frame-menu-bar">
 		<td class="main-table-frame-menu-bar" colspan="2">
-			<a href="index.php?page=home.php&popUpNotificationCode=HPH0">Home</a>
-			|
-			<?php
-				if ($_SESSION['loggedin'] == 'True'){
-					echo '<a href="index.php?do=logout">Logout</a>';
-				} else {
-					echo '<a href="index.php?page=login.php">Login/Register</a>';
-				}// end if
-			?>
-			|
-			<?php
-				if ($_SESSION['security-level'] == 0){
-					echo '<a href="index.php?do=toggle-hints&page='.$lPage.'">Toggle Hints</a> |';
-				}// end if
-			?>
-			<a href="index.php?do=toggle-security&page=<?php echo $lPage?>">Toggle Security</a>
-			|
-			<a href="index.php?do=toggle-enforce-ssl&page=<?php echo $lPage?>"><?php echo $lEnforceSSLLabel; ?></a>
-			|
-			<a href="set-up-database.php">Reset DB</a>
-			|
-			<a href="index.php?page=show-log.php">View Log</a>
-			|
-			<a href="index.php?page=captured-data.php">View Captured Data</a>
-		</td>
+            <div class="container" style="margin-top: 25px">
+                <div class="row">
+                    <div class="col" style="justify-content: center; display: flex">
+                        <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
+                            <div class="btn-group me-2" role="group" aria-label="First group">
+                                <a class="btn btn-outline-secondary" style="border-color: white;"
+                                   href="index.php?page=home.php&popUpNotificationCode=HPH0">Home</a>
+                                <?php
+                                if ($_SESSION['loggedin'] == 'True') {
+                                    echo '<a class="btn btn-outline-secondary" style="border-color: white;" href="index.php?do=logout">Logout</a>';
+                                } else {
+                                    echo '<a class="btn btn-outline-secondary" style="border-color: white;" href="index.php?page=login.php">Login/Register</a>';
+                                }// end if
+                                ?>
+                                <?php
+                                if ($_SESSION['security-level'] == 0) {
+                                    echo '<a class="btn btn-outline-secondary" style="border-color: white;" href="index.php?do=toggle-hints&page=' . $lPage . '">Toggle Hints</a>';
+                                }// end if
+                                ?>
+                                <a class="btn btn-outline-secondary"
+                                   style="border-color: white;"
+                                   href="index.php?do=toggle-security&page=<?php echo $lPage ?>">Toggle Security</a>
+                                <a class="btn btn-outline-secondary"
+                                   style="border-color: white;"
+                                   href="index.php?do=toggle-enforce-ssl&page=<?php echo $lPage ?>"><?php echo $lEnforceSSLLabel; ?></a>
+                                <a class="btn btn-outline-secondary"
+                                   style="border-color: white;" href="set-up-database.php">Reset DB</a>
+                                <a class="btn btn-outline-secondary"
+                                   style="border-color: white;"
+                                   href="index.php?page=show-log.php">View Log</a>
+                                <a class="btn btn-outline-secondary"
+                                   style="border-color: white;"
+                                   href="index.php?page=captured-data.php">View
+                                    Captured Data</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </td>
 	</tr>
 	<tr>
 		<td class="main-table-frame-left">
 			<?php require_once 'main-menu.php'; ?>
-			<div>&nbsp;</div>
-			<div>
-				<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-					<input type="hidden" name="cmd" value="_s-xclick">
-					<input type="hidden" name="hosted_button_id" value="45R3YEXENU97S">
-					<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" name="submit" alt="Donate Today!">
-					<img alt="" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-				</form>
-				Want to Help?
-			</div>
-			<div>&nbsp;</div>
-			<div>
-				<a href="http://www.youtube.com/user/webpwnized" target="_blank">
-					<img alt="Webpwnized YouTube Channel" src="./images/youtube-play-icon-40-40.png" />
-					<br/>
-					Video Tutorials
-				</a>
-			</div>
-			<div>&nbsp;</div>
-			<div>
-				<a href="https://twitter.com/webpwnized" target="_blank">
-					<img alt="Webpwnized Twitter Channel" src="./images/twitter-bird-48-48.png" />
-					<br/>
-					Announcements
-				</a>
-			</div>
-			<div>&nbsp;</div>
-			<div>
-				<a
-					href="https://www.sans.org/reading-room/whitepapers/application/introduction-owasp-mutillidae-ii-web-pen-test-training-environment-34380"
-					target="_blank"
-					title="Whitepaper: Introduction to OWASP Mutillidae II Web Pen Test Training Environment"
-				>
-					<img align="middle" alt="Webpwnized Twitter Channel" src="./images/pdf-icon-48-48.png" />
-					<br/>
-					Getting Started
-				</a>
-			</div>
-			<div>&nbsp;</div>
 		</td>
 		<td class="main-table-frame-right">
 			<!-- Begin Content -->

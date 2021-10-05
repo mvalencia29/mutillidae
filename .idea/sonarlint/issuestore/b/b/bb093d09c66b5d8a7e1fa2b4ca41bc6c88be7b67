@@ -1,0 +1,9 @@
+
+|php:S115"cRename this constant "__SITE_ROOT__" to match the regular expression ^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$.(Ñ‰½ûÿÿÿÿÿ
+`php:S112"FDefine and throw a dedicated exception instead of using a generic one.(½‹µøÿÿÿÿ
+`php:S112—"FDefine and throw a dedicated exception instead of using a generic one.(½‹µøÿÿÿÿ
+`php:S112"FDefine and throw a dedicated exception instead of using a generic one.(½‹µøÿÿÿÿ
+`php:S112£"FDefine and throw a dedicated exception instead of using a generic one.(½‹µøÿÿÿÿ
+`php:S112ª"FDefine and throw a dedicated exception instead of using a generic one.(½‹µøÿÿÿÿ
+\	php:S1192Ê"GDefine a constant instead of duplicating this literal "<br />" 5 times.(óğ¤
+Pphp:S131r"7Add a "case default" clause to this "switch" statement.(Ê÷ÅÖşÿÿÿÿ

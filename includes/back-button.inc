@@ -51,10 +51,8 @@
 				align="middle"
 		/>
 		&nbsp;
-		Back
 	</a>
 	</span>
-	<?php include_once('./includes/help-button.inc');?>
 </div>
 <script nonce="<?php echo $CSPNonce; ?>">
     document.addEventListener('DOMContentLoaded', function () {

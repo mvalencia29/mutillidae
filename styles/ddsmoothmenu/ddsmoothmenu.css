@@ -22,7 +22,7 @@
 /*Top level menu link items style*/
 .ddsmoothmenu ul li a{
 	display: block;
-	background: #414141; /*background of menu items (default state)*/
+	background: #5685ba; /*background of menu items (default state)*/
 	color: white;
 	padding: 8px 10px;
 	border-right: 1px solid #778;
@@ -40,7 +40,7 @@
 }
 
 .ddsmoothmenu ul li a.selected{ /*CSS class that's dynamically added to the currently active menu items' LI A element*/
-	background: black; 
+	background: #5685ba;
 	color: white;
 }
 
